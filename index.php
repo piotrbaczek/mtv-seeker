@@ -20,7 +20,7 @@
 			for ($i = (int) $_POST['od']; $i <= (int) $_POST['do']; $i++) {
 				$urlContents = file_get_contents($url . $i);
 				preg_match("/<title>(.*)<\/title>/i", $urlContents, $matches);
-				echo '<a href="' . $url . $i . '">' . $i . '</a> : ' . $matches['1'] . '<br/>';
+				echo '<a href="javascript:window.open(\'' . $url . $i . '\')">' . $i . '</a> : ' . $matches['1'] . '<br/>';
 			}
 		}
 		?>

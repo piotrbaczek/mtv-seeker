@@ -16,7 +16,7 @@
 		<?php
 		if (isset($_POST['od']) && isset($_POST['do'])) {
 			$matches = Array();
-			$url = 'http://www.mtv.com/videos/?series=2213&seriesId=39254&channelId=1&id=';
+			$url = 'http://www.mtv.com/videos/?id=';
 			for ($i = (int) $_POST['od']; $i <= (int) $_POST['do']; $i++) {
 				$urlContents = file_get_contents($url . $i);
 				preg_match("/<title>(.*)<\/title>/i", $urlContents, $matches);
